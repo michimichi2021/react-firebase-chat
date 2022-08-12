@@ -1,18 +1,10 @@
-import React, { useEffect,useState,useRef,useLayoutEffect  } from "react"
-import Header from "./components/Header"
+import { useRef,useLayoutEffect  } from "react"
 import useFirebase from "./useFirebase"
 import { Timestamp } from "firebase/firestore"
 import { format } from "date-fns"
 import {
   Box,
-  Link,
-  Divider,
-  Stack,
-  TextField,
-  Button
 } from "@mui/material"
-import SendIcon from '@mui/icons-material/Send';
-import { firebaseApp } from "./firebase/firebaseConfig"
 import MessageInput from "./components/MessageInput"
 
 
@@ -22,10 +14,6 @@ export default function Home(){
     id: string
     text: string
     createdAt: Timestamp
-    user: {
-      name: string
-      uid: string
-    }
   }
   const bottomRef = useRef<HTMLDivElement>(null)
   useLayoutEffect(() => {

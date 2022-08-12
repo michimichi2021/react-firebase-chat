@@ -4,7 +4,6 @@ import Signup from "./Signup";
 import Login from "./Login";
 import Home from "./Home";
 import Header from "./components/Header";
-import Profile from "./profile";
 import PasswordReset from "./PasswordReset";
 
 
@@ -26,7 +25,6 @@ export default function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="profile" element={<Profile />} />
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />

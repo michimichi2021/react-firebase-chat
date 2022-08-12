@@ -52,6 +52,7 @@ return (
       <TextField
       size="small"
       sx={{ flex: 1 }}
+      value={message}
       onChange={e => setMessage(e.target.value)}
        />
       <Button

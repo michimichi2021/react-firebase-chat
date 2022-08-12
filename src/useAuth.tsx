@@ -90,9 +90,3 @@ export const usePasswordReset = () => {
 
   return { success, error, passwordReset }
 }
-
-export const useUser = () => {
-  const auth = getAuth()
-  const user = auth.currentUser
-
-}

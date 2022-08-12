@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useLogout } from '../useAuth'
 import {
@@ -9,14 +9,7 @@ import {
   Menu,
   MenuItem,
   Link,
-  Snackbar,
-  Alert,
-  Divider,
-  Stack,
-  TextField,
-  Button
 } from "@mui/material"
-import SendIcon from '@mui/icons-material/Send'
 import { firebaseApp } from "../firebase/firebaseConfig"
 import AccountCircle from "@mui/icons-material/AccountCircle"
 
