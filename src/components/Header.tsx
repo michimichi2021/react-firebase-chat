@@ -8,6 +8,7 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Link,
 } from "@mui/material"
 import { firebaseApp } from "../firebase/firebaseConfig"
 import AccountCircle from "@mui/icons-material/AccountCircle"
@@ -85,7 +86,12 @@ export default function Header(){
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleLogout}>ログアウト</MenuItem>
+                <MenuItem onClick={handleClose}>
+                <Link href="profile" underline="none" color="inherit">
+                  プロフィール
+                </Link>
+                </MenuItem>
+                <MenuItem onClick={handleLogout} >ログアウト</MenuItem>
               </Menu>
             </div>
           )}
