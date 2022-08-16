@@ -2,7 +2,6 @@ import { useRef,useLayoutEffect  } from "react"
 import useFirebase from "./useFirebase"
 import { Timestamp } from "firebase/firestore"
 import { format } from "date-fns"
-import { MessageInput } from "../components/MessageInput"
 import {
   Box,
 } from "@mui/material"
@@ -54,7 +53,6 @@ export default function Home(){
         <p>メッセージが存在しません</p>
       )}
       <div ref={bottomRef}></div>
-      <MessageInput/>
     </Box>
   )
 }
