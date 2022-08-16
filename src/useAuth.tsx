@@ -2,6 +2,7 @@ import { useState } from "react"
 import { firebaseApp } from "./firebase/firebaseConfig"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { signInWithEmailAndPassword } from "firebase/auth"
+import { signOut } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 
 const fireauth = firebaseApp.fireauth
@@ -45,4 +46,18 @@ export const useLogin = () => {
   }
 
   return { success, error, login }
+}
+
+export const useLogout = () => {
+  const logout = () => {
+    signOut(fireauth)
+      .then(() => {
+        console.log("Sign-out successful.")
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+  }
+
+  return { logout }
 }
